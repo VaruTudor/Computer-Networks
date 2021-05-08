@@ -1,0 +1,30 @@
+(1) network address: 
+(1) broadcast address:
+(in need 3) ussable address range:
+(in need of 5 so we need to pick the minimal power of 2 larger than 5)
+
+mask: 	11111111.11111111.11111111.11111000
+	255.255.255.248
+	/29
+
+if we're given 192.168.100.5 as an address (if we do a bitwise AND between any address from the natwork and the mask we should get the network address)
+
+192.168.100.5	AND
+255.255.255.248
+---------------
+192.168.100.0	=> wrong, the network address should be itself when doing END. Therefore we are given a new one: 192.168.100.0 
+
+DEFAULT GATEAWAY - exit from LAN to WAN, usually router address
+
+DHCP - Dynamic Host Configuration Protocol (automatic addressing)
+DNS - Domain Name System
+
+*in lab5 site dadi u see how to set DHCP directly from router, without the need of a server
+
+*u can set a DNS server from another network (example PC1 uses DNS from other network, and Laptop1 from Lan)
+
+*we also use RIP (can find in lab6 dadi) or, instead it can be static which is easier for few networks (-> rip,cli,version 2, go back add networks which is part of)
+
+*for WIRELESS, we need to change stuff from the laptop, look in lab_w12 50:00...
+
+*NAT lab_w12 1:08 and dadi's site lab6
